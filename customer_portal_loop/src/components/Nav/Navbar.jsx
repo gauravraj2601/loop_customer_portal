@@ -2,33 +2,27 @@ import { React } from "react";
 import {
   Box,
   Flex,
-  //   Link,
-  // Button,
-  // useColorModeValue,
   Stack,
-  // useColorMode,
   useDisclosure,
   HStack,
   IconButton,
   Image,
-  Button,
   DrawerBody,
   Drawer,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  DrawerHeader,
-  DrawerFooter,
+
 } from "@chakra-ui/react";
 import {  CiSearch } from "react-icons/ci";
 import { IoPersonOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-import loopLogo from "../Assets/loop.webp"
+import loopLogo from "../../Assets/loop.webp"
 import { Link } from "react-scroll";
 import NavLink from './NavLink';
 import { RxHamburgerMenu } from "react-icons/rx";
-import { AiOutlineClose } from "react-icons/ai";
 import { CgShoppingBag } from "react-icons/cg"; 
+import NavBanner from "./NavBanner";
 
 const links = [
   { name: `Shop Subscription `, id: "sel1" },
@@ -42,8 +36,9 @@ export default function Navbar() {
 
   return (
     <>
-      <Box position={"fixed"} w={"full"} zIndex={2} bg={"#f3f3f3"} px={4} fontFamily={"inherit"}>
-        <Flex h={16} w={"80%"} m={"auto"} alignItems={"center"} justifyContent={"space-between"}>
+      <NavBanner />
+      <Box  w={"full"} h={16} position={"sticky"} top={0} zIndex={1}  px={4} fontFamily={"inherit"} bg={"#f3f3f3"} >
+        <Flex w={["95%", "95%","90%", "80%"]} h={16} m={"auto"} alignItems={"center"} justifyContent={"space-between"}>
           <Flex gap={{base: "none",md:"200px" ,lg: "32px"}}>
           <IconButton
             size={"md"}

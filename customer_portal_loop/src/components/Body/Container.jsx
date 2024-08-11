@@ -1,12 +1,17 @@
-import React from 'react'
-import welcomeBanner from "../../Assets/welcomeLoop.svg"
-import { Box } from '@chakra-ui/react'
+import React from "react";
+import { Box } from "@chakra-ui/react";
+import OrderStatus from "./OrderStatus";
+import TryAllProducts from "./TryAllProducts";
+import Crousel from "./Crousel";
 const Container = () => {
   return (
-    <Box >
-        <img src={welcomeBanner} alt="welcome_Banner" />
+    <Box w={["95%", "95%", "90%", "72%"]} pb={"200px"} m={"auto"} bg={"#e3df9c"} pl={"15px"}>
+        <OrderStatus />
+        <TryAllProducts />
+        <Crousel />
     </Box>
-  )
-}
+  );
+};
 
-export default Container
+export default Container;
+

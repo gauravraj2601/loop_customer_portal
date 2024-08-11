@@ -7,7 +7,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import { beers } from "../../db";
+import { beers } from "../db";
 
 const Crousel = () => {
  
@@ -18,7 +18,7 @@ const Crousel = () => {
     <Flex h={"350px"}
      w={"100%"}
       overflowX={"auto"}
-       bg={"yellow"}
+    //    bg={"yellow"}
         p={"20px"}
          mt={2}  
          sx={{
@@ -36,7 +36,7 @@ const Crousel = () => {
             //   bg={"white"}
                 ml={"-10px"}
               gap={"15px"}
-              mr={"45px"}
+              mr={"38px"}
               mt={"20px"}
             >
               <Stack

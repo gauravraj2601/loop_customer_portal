@@ -24,11 +24,11 @@ This project is a customer portal application built using React. The application
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/customer-portal.git
+   git clone https://github.com/gauravraj2601/customer_portal_loop.git
 2. Navigate to the project directory:
 
    ```bash
-    cd customer-portal
+    cd customer_portal_loop
     ```
 3. Install the dependencies:
    ```bash

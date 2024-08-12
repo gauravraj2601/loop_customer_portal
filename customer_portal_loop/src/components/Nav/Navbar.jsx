@@ -52,7 +52,7 @@ export default function Navbar() {
             <Link
               activeClass="active"
               className="sel0"
-              // to="test1"
+              to="test1"
               spy={true}
               smooth={true}
               duration={500}

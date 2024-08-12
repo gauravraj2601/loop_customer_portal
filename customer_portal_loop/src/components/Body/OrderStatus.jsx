@@ -1,8 +1,23 @@
 import React from 'react'
 import { SlRefresh } from "react-icons/sl";
-import { Box,Button ,Flex, HStack, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box,Button ,Flex, HStack, Stack, Text, useDisclosure, VStack } from "@chakra-ui/react";
+import { DelaySubscriptionDrawer } from '../OrderDrawer';
+import OrderModal from '../OrderModal';
 
 const OrderStatus = () => {
+    
+    const {
+        isOpen: isDelayOpen,
+        onOpen: onDelayOpen,
+        onClose: onDelayClose
+      } = useDisclosure();
+      
+      const {
+        isOpen: isSkipOpen,
+        onOpen: onSkipOpen,
+        onClose: onSkipClose
+      } = useDisclosure();
+     
   return (
     <>
     <Box w={"full"} h={"160px"}>
@@ -73,6 +88,7 @@ const OrderStatus = () => {
                 bg: "#145A22",  // Background color on hover
                 color: "#E0FF56",  // Text color on hover
               }}
+              onClick={onSkipOpen}
             >
               Order Now
             </Button>
@@ -89,6 +105,7 @@ const OrderStatus = () => {
                 bg: "#145A22",  
                 color: "#E0FF56",  
               }}
+              onClick={onSkipOpen}
             >
               Skip
             </Button>
@@ -105,6 +122,7 @@ const OrderStatus = () => {
                 bg: "#145A22",  
                 color: "#E0FF56",  
               }}
+              onClick={onDelayOpen}
             >
               Postpone
             </Button>
@@ -114,6 +132,8 @@ const OrderStatus = () => {
           </Text>
         </Stack>
       </Box>
+      <DelaySubscriptionDrawer isOpen={isDelayOpen} onClose={onDelayClose}  />
+      <OrderModal isOpen={isSkipOpen} onClose={onSkipClose} />
     </>
   )
 }

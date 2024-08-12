@@ -27,7 +27,7 @@ const SavingPlan = () => {
         fontWeight={"500"}
       >
         <Text fontSize={"larger"}>Saving plan details</Text>
-        <Flex gap={"15px"}>
+        <Flex gap={"15px"} direction={{ base: "column", sm:"row",md:"row" ,lg: "row" }} >
           <DrawerButton history={"Upcoming orders"} order={"Upcoming Order"} orderSummary={"No Upcoming Orders"} />
           <DrawerButton history={"Order history"} order={"Past order"} orderSummary={"No Past Orders"}/>
         </Flex>

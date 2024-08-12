@@ -31,7 +31,7 @@ const SavingPlanCart = ({image, name, price}) => {
           1
         </Box>
       </VStack>
-      <VStack w={"70%"} alignItems={"start"} gap={[null, "50%","40%","50%"]} >
+      <VStack w={"70%"} alignItems={"start"} gap={["20%", "50%","40%","50%"]} >
         <Text fontWeight={"500"}>{name}</Text>
         <Text textDecoration={"line-through"}>${price}</Text>
       </VStack>

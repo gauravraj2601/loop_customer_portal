@@ -29,7 +29,7 @@ const BonousBanner = () => {
               <Heading
                 color={"#1a541e"}
                 mb={5}
-                fontSize={{ sm: "44px", md: "66px" }}
+                fontSize={{base:"28px", sm: "44px", md: "66px" }}
                 fontFamily={"Lilita One"}
                 textAlign={{ sm: "middle", md: "start" }}
               >
@@ -37,14 +37,14 @@ const BonousBanner = () => {
               </Heading>
             </Box>
             <Image
-              w={{ sm: "100px", md: "120px" }}
+              w={{ base:"80px", sm: "100px", md: "120px" }}
               src="https://cdn.shopify.com/s/files/1/0654/7079/1899/files/wellness_bonus_icon_stamp_1.svg?v=1721371853"
             />
           </Flex>
 
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={"20px"} mt={5}>
-            {stats.map((el) => (
-              <Flex>
+            {stats.map((el, index) => (
+              <Flex key={index+1}>
                 {el.icon !== "" ? (
                   <Image w="60px" src={el.icon} />
                 ) : (

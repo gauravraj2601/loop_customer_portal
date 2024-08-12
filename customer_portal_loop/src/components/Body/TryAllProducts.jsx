@@ -2,11 +2,7 @@ import React from "react";
 import { Stack, Text, Button } from "@chakra-ui/react";
 import cloud from "../../Assets/cloud.svg";
 const TryAllProducts = () => {
-    const font = {
-        "font-family": "Lilita One",
-        "font-weight": 400,
-        "font-style": "normal",
-      };
+ 
   return (
     <Stack
       p="6"
@@ -24,7 +20,7 @@ const TryAllProducts = () => {
           color={"gray.100"}
           fontSize={["35px","38px","45px","45px"]}
           fontFamily={"Lilita One"}
-          fontStyle={font}
+         
         >
           Try something new!
         </Text>

@@ -4,11 +4,7 @@ import { Box, Stack, Text, Container, Image } from "@chakra-ui/react";
 import welcomeBeer from "../../Assets/welcomeLoop.svg";
 
 export default function Banner() {
-  const font = {
-    "font-family": "Lilita One",
-    "font-weight": 400,
-    "font-style": "normal",
-  };
+
 
   const card = {
     title: "Loop Wellness Club",
@@ -60,7 +56,6 @@ export default function Banner() {
             </Text>
             <Text
               fontFamily={"Lilita One"}
-              fontStyle={font}
               fontWeight={"bold"}
               color="gray.100"
               fontSize={{ base: "32px", md: "40px", lg: "40px" }}

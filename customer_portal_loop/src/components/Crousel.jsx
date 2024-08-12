@@ -5,14 +5,15 @@ import {
   Image,
   Stack,
   Text,
+  useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
 import { beers } from "../db";
+import AddProductDrawer from "./ProductDrawer";
 
 const Crousel = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
  
-
-  
   return (
     <>
     <Flex h={"350px"}
@@ -31,6 +32,7 @@ const Crousel = () => {
         beers.map((el) => {
           return (
             <Flex
+            key={el.id}
               w="200px"
               h="280px"
             //   bg={"white"}
@@ -46,6 +48,7 @@ const Crousel = () => {
                 rounded={10}
                 alignItems="start"
                 color={"#1b4e1f"}
+                onClick={ onOpen}
                 
               >
                 <Image
@@ -94,6 +97,7 @@ const Crousel = () => {
         <Center> NO PRODUCTS Loading....</Center>
       )}
     </Flex>
+    <AddProductDrawer isOpen={isOpen} onClose={onClose} />
     </>
   );
 };
